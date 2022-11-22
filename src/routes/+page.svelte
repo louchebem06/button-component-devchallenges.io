@@ -1,7 +1,10 @@
 <script lang="ts">
 	import Button from "./Button.svelte";
 </script>
-
+<div class="content">
+<div class="left">
+	Wesh la zone
+</div>
 <div class="right">
 	<h1>Buttons</h1>
 
@@ -65,15 +68,33 @@
 		<Button color="secondary" value="Secondary" />
 		<Button color="danger" value="Danger" />
 	</section>
+
+	<p>Icons: https://material.io/resources/icons/?style=round</p>
+	<footer>
+		<p>created by <bold><a href="http://github.bryanledda.fr">louchebem06</a></bold> - devChallenges.io</p>
+	</footer>
+</div>
 </div>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Ubuntu Mono:wght@400&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 	* {
 		margin: 0;
 		padding: 0;
+	}
+
+	.content {
+		display: flex;
+		height: calc(100vh - 16px);
+		gap: 80px;
+	}
+
+	.left {
+		padding: 50px;
+		background: #FAFBFD;
 	}
 
 	h1 {
@@ -95,6 +116,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 33px;
+		padding: 50px;
 	}
 
 	.element {
@@ -109,5 +131,27 @@
 		line-height: 12px;
 		color: #333333;
 		margin-bottom: 8px;
+	}
+
+	p {
+		font-family: 'Ubuntu Mono';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 12px;
+		color: #828282;
+	}
+
+	footer {
+		padding-bottom: 50px;
+	}
+
+	footer p, footer a {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		color: #A9A9A9;
 	}
 </style>
