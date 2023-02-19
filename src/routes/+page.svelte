@@ -1,20 +1,18 @@
 <script lang="ts">
 	import Button from "./Button.svelte";
 </script>
+
+<svelte:head>
+	<title>Button Composante</title>
+</svelte:head>
+
 <div class="content">
-<div class="left">
-	Wesh la zone
-</div>
 <div class="right">
 	<h1>Buttons</h1>
 
 	<section>
 		<div class="element">
 			<p>{"<Button />"}</p>
-			<Button />
-		</div>
-		<div class="element">
-			<p>&:hover, &:focus</p>
 			<Button />
 		</div>
 	</section>
@@ -24,49 +22,76 @@
 			<p>{"<Button variant=\"outline\" />"}</p>
 			<Button variant="outline" />
 		</div>
+	</section>
+
+	<section>
 		<div class="element">
-			<p>&:hover, &:focus</p>
-			<Button variant="outline" />
+			<p>{'<Button variant="text" />'}</p>
+			<Button variant="text" />
 		</div>
 	</section>
 
 	<section>
-		<Button variant="text" />
-		<Button variant="text" />
+		<div class="element">
+			<p>{'<Button disableShadow />'}</p>
+			<Button disableShadow />
+		</div>
 	</section>
 
 	<section>
-		<Button disableShadow />
+		<div class="element">
+			<p>{'<Button disabled />'}</p>
+			<Button disabled />
+		</div>
+		<div class="element">
+			<p>{'<Button variant="text" disabled />'}</p>
+			<Button variant="text" disabled />
+		</div>
 	</section>
 
 	<section>
-		<Button disabled />
-		<Button variant="text" disabled />
+		<div class="element">
+			<p>{'<Button startIcon="local_grocery_store" />'}</p>
+			<Button startIcon="local_grocery_store" />
+		</div>
+		<div class="element">
+			<p>{'<Button endIcon="local_grocery_store" />'}</p>
+			<Button endIcon="local_grocery_store" />
+		</div>
 	</section>
 
 	<section>
-		<Button startIcon="local_grocery_store" />
-		<Button endIcon="local_grocery_store" />
+		<div class="element">
+			<p>{'<Button size="sm" />'}</p>
+			<Button size="sm" />
+		</div>
+		<div class="element">
+			<p>{'<Button size="md" />'}</p>
+			<Button size="md" />
+		</div>
+		<div class="element">
+			<p>{'<Button size="lg" />'}</p>
+			<Button size="lg" />
+		</div>
 	</section>
 
 	<section>
-		<Button size="sm" />
-		<Button size="md" />
-		<Button size="lg" />
-	</section>
-
-	<section>
-		<Button color="default" />
-		<Button color="primary" />
-		<Button color="secondary" value="Secondary" />
-		<Button color="danger" value="Danger" />
-	</section>
-
-	<section>
-		<Button color="default" />
-		<Button color="primary" />
-		<Button color="secondary" value="Secondary" />
-		<Button color="danger" value="Danger" />
+		<div class="element">
+			<p>{'<Button color=”default” />'}</p>
+			<Button color="default" />
+		</div>
+		<div class="element">
+			<p>{'<Button color=”primary” />'}</p>
+			<Button color="primary" />
+		</div>
+		<div class="element">
+			<p>{'<Button color=”secondary” />'}</p>
+			<Button color="secondary" value="Secondary" />
+		</div>
+		<div class="element">
+			<p>{'<Button color=”danger” />'}</p>
+			<Button color="danger" value="Danger" />
+		</div>
 	</section>
 
 	<p>Icons: https://material.io/resources/icons/?style=round</p>
@@ -90,11 +115,6 @@
 		display: flex;
 		height: calc(100vh - 16px);
 		gap: 80px;
-	}
-
-	.left {
-		padding: 50px;
-		background: #FAFBFD;
 	}
 
 	h1 {

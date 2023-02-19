@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from "svelte";
+
 	export let value: string = "Default";
 	export let disabled: boolean = false;
 	export let variant: string = "";
